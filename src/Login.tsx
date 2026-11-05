@@ -1,25 +1,24 @@
 function Login() {
   return (
-    <div className="">
-      {/* <form >
-        <h2>Welcome back</h2>
-        <div className="">
-            <label htmlFor="">Email</label>
-            <input type="email" name="" id="" />
-        </div>
+    <div className="flex  justify-center mt-7">
+    <div className="bg-blue-200 text-[20px] flex flex-col border-2 h-[530px] w-[500px] gap-6 pl-[40px] pt-7 rounded-3xl">
+    
+      <h1 className="justify-center flex pr-[40px] font-bold text-2xl">Welcome back</h1>
+      <div className=" flex flex-col gap-2">
+        <label htmlFor="" className="mt-5 font-bold">Email</label>
+        <input type="email" name="" id="" className="border-2 outline-0 w-[420px] h-[40px] rounded-lg pl-1.5" />
 
-        <div className="">
-            <label htmlFor="">Password</label>
-            <input type="password" name="" id="" />
-        </div>
-        <div>
-            <button type="submit">Log in</button>
-        </div>
+        <label htmlFor="" className="mt-5 font-bold">Password</label>
+        <input type="password" name="" id="" className="border-2 outline-0 w-[420px] h-[40px] rounded-lg pl-1.5" />
+      </div>
 
-        <div>
-            <p>Don't have an account? <a href="">Register</a></p>
-        </div>
-      </form> */}
+      <div className="flex justify-center pr-[40px]">
+        <button type="submit" className="bg-blue-600 text-white hover:bg-blue-800 w-[420px] h-[50px] rounded-xl cursor-pointer font-bold">Log In</button>
+      </div>
+      <div>
+        <p className="justify-center gap-2 flex pr-[40px]">Don't have an account? <a href="" className="text-blue-500 hover:underline font-bold">Register</a></p>
+      </div>
+      </div>
     </div>
   )
 }
