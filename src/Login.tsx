@@ -1,4 +1,8 @@
-function Login() {
+interface LoginFormProps {
+  goToRegister: () => void;
+}
+
+function Login({ goToRegister }: LoginFormProps) {
   return (
     <div className="flex  justify-center mt-7">
     <div className="bg-blue-200 text-[20px] flex flex-col border-2 h-[530px] w-[500px] gap-6 pl-[40px] pt-7 rounded-3xl">
@@ -16,7 +20,7 @@ function Login() {
         <button type="submit" className="bg-blue-600 text-white hover:bg-blue-800 w-[420px] h-[50px] rounded-xl cursor-pointer font-bold">Log In</button>
       </div>
       <div>
-        <p className="justify-center gap-2 flex pr-[40px]">Don't have an account? <a href="" className="text-blue-500 hover:underline font-bold">Register</a></p>
+        <p className="justify-center gap-2 flex pr-[40px]">Don't have an account? <button onClick={goToRegister} className="text-blue-500 hover:underline font-bold">Register</button></p>
       </div>
       </div>
     </div>

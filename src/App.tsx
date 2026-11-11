@@ -1,12 +1,19 @@
-import Register from "./Register"
-import Login from "./Login"
+import { useState } from "react";
+import LoginForm from "./Login";
+import RegisterForm from "./Register";
+
 function App() {
+  const [isLogin, setIsLogin] = useState(true);
+
   return (
     <>
-    <Login/>
-    <Register/>
+      {isLogin ? (
+        <LoginForm goToRegister={() => setIsLogin(false)} />
+      ) : (
+        <RegisterForm goToLogin={() => setIsLogin(true)} />
+      )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

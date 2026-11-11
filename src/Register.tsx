@@ -1,6 +1,10 @@
-function Register() {
+interface RegisterFormProps {
+  goToLogin: string;
+}
+
+function Register({ goToLogin }: RegisterFormProps) {
   return (
-    <div className="flex  justify-center mt-7">
+    <div className="flex  justify-center mt-7 ">
     <div className="bg-blue-200 text-[20px] flex flex-col border-2 h-[530px] w-[500px] gap-6 pl-[40px] pt-7 rounded-3xl">
     
       <h1 className="justify-center flex pr-[40px] font-bold text-2xl">Create your account</h1>
@@ -19,7 +23,7 @@ function Register() {
         <button type="submit" className="bg-blue-600 text-white hover:bg-blue-800 w-[420px] h-[50px] rounded-xl cursor-pointer font-bold">Register Now</button>
       </div>
       <div>
-        <p className="justify-center gap-2 flex pr-[40px]">Already have an account <a href="" className="text-blue-500 hover:underline font-bold">Log in</a></p>
+        <p className="justify-center gap-2 flex pr-[40px]">Already have an account <button  onClick={goToLogin} className="text-blue-500 hover:underline font-bold">Log in</button></p>
       </div>
       </div>
     </div>
